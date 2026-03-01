@@ -5,11 +5,15 @@
 
 // Enqueue styles and scripts
 function optiflow_enqueue_assets() {
+    $theme_version = wp_get_theme()->get('Version');
+    $style_path = get_template_directory() . '/style.css';
+    $style_version = file_exists($style_path) ? filemtime($style_path) : $theme_version;
+
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap', array(), null);
-    wp_enqueue_style('optiflow-style', get_stylesheet_uri(), array(), '1.0');
-    wp_enqueue_script('optiflow-script', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
+    wp_enqueue_style('optiflow-style', get_template_directory_uri() . '/style.css', array(), $style_version);
+    wp_enqueue_script('optiflow-script', get_template_directory_uri() . '/js/main.js', array(), $theme_version, true);
 }
-add_action('wp_enqueue_scripts', 'optiflow_enqueue_assets');
+add_action('wp_enqueue_scripts', 'optiflow_enqueue_assets', 20);
 
 // Theme support
 function optiflow_setup() {
