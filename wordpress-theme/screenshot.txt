@@ -1,0 +1,28 @@
+NOTA: Para completar o tema WordPress, você precisa:
+
+1. Adicionar um arquivo "screenshot.png" (1200x900px) na raiz da pasta do tema
+   - Este é o preview que aparece em Aparência > Temas no WordPress
+
+2. Adicionar a imagem "hero-bg.jpg" na pasta "images/" dentro do tema
+   - Copie a mesma imagem usada no projeto Lovable
+
+3. Estrutura final da pasta do tema:
+   wordpress-theme/
+   ├── style.css
+   ├── functions.php
+   ├── header.php
+   ├── footer.php
+   ├── index.php
+   ├── screenshot.png (você precisa criar)
+   ├── js/
+   │   └── main.js
+   └── images/
+       └── hero-bg.jpg (copie do projeto)
+
+4. Para instalar:
+   - Compacte a pasta como .zip
+   - No WordPress: Aparência > Temas > Adicionar Novo > Enviar Tema
+   - Ative o tema
+
+5. Para configurar o número do WhatsApp:
+   - Aparência > Personalizar > WhatsApp
