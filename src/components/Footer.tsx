@@ -1,4 +1,5 @@
 import { MessageCircle } from "lucide-react";
+import optiflowLogo from "@/assets/optiflow-logo.png";
 
 const Footer = () => {
   return (
@@ -6,9 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg gradient-cyan flex items-center justify-center">
-              <span className="text-secondary-foreground font-heading font-bold text-sm">OF</span>
-            </div>
+            <img src={optiflowLogo} alt="OptiFlow Digital" className="w-8 h-8 rounded-lg object-contain" />
             <span className="font-heading font-bold text-lg text-primary-foreground">
               Opti<span className="text-primary">Flow</span> Digital
             </span>
