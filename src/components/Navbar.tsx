@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import optiflowLogo from "@/assets/optiflow-logo.png";
 
 const WHATSAPP_LINK = "https://wa.me/553899484217";
 
@@ -20,9 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#hero" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg gradient-cyan flex items-center justify-center">
-              <span className="text-secondary-foreground font-heading font-bold text-sm">OF</span>
-            </div>
+            <img src={optiflowLogo} alt="OptiFlow Digital" className="w-8 h-8 rounded-lg object-contain" />
             <span className="font-heading font-bold text-lg text-primary-foreground">
               Opti<span className="text-primary">Flow</span>
             </span>
