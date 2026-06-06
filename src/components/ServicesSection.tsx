@@ -1,4 +1,4 @@
-import { Clock, UserCheck, CalendarCheck, MessageSquare, PiggyBank } from "lucide-react";
+import { Clock, UserCheck, CalendarCheck, MessageSquare, PiggyBank, Globe } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,12 @@ const services = [
     title: "Redução de Custos",
     description: "Otimize sua equipe e recursos, fazendo mais com menos investimento.",
   },
+  {
+    icon: Globe,
+    title: "Criação de Sites",
+    description: "Sites profissionais, landing pages e lojas virtuais otimizados para converter visitantes em clientes.",
+    link: "/sites",
+  },
 ];
 
 const ServicesSection = () => {
@@ -34,29 +40,46 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-            Automação de WhatsApp: <span className="text-gradient-cyan">Sua Vantagem Competitiva</span>
+            Nossos Serviços: <span className="text-gradient-cyan">Automação + Presença Digital</span>
           </h2>
           <p className="text-lg font-body text-primary-foreground/60">
-            Descubra como a OptiFlow Digital otimiza seu atendimento e vendas via WhatsApp.
+            Da automação de WhatsApp à criação de sites profissionais, a OptiFlow Digital potencializa todos os pontos de contato do seu negócio.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`relative rounded-2xl p-8 border border-cyan/10 bg-navy-deep/50 backdrop-blur-sm hover:border-cyan/30 transition-all duration-300 group opacity-0 animate-fade-in ${
-                index === 4 ? "sm:col-span-2 lg:col-span-1 lg:col-start-2" : ""
-              }`}
-              style={{ animationDelay: `${0.15 * (index + 1)}s` }}
-            >
-              <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+          {services.map((service, index) => {
+            const className = `relative rounded-2xl p-8 border border-cyan/10 bg-navy-deep/50 backdrop-blur-sm hover:border-cyan/30 transition-all duration-300 group opacity-0 animate-fade-in ${
+              service.link ? "cursor-pointer" : ""
+            }`;
+            const style = { animationDelay: `${0.15 * (index + 1)}s` };
+            const content = (
+              <>
+                <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-heading font-bold text-primary-foreground mb-2">{service.title}</h3>
+                <p className="text-sm font-body text-primary-foreground/60 leading-relaxed">{service.description}</p>
+                {service.link && (
+                  <span className="inline-block mt-3 text-sm font-body text-primary hover:underline">
+                    Saiba mais →
+                  </span>
+                )}
+              </>
+            );
+            if (service.link) {
+              return (
+                <a key={service.title} href={service.link} className={className} style={style}>
+                  {content}
+                </a>
+              );
+            }
+            return (
+              <div key={service.title} className={className} style={style}>
+                {content}
               </div>
-              <h3 className="text-lg font-heading font-bold text-primary-foreground mb-2">{service.title}</h3>
-              <p className="text-sm font-body text-primary-foreground/60 leading-relaxed">{service.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
