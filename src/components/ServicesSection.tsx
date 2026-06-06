@@ -49,16 +49,12 @@ const ServicesSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => {
-            const Wrapper = service.link ? "a" : "div";
-            return (
-              <Wrapper
-                key={service.title}
-                href={service.link}
-                className={`relative rounded-2xl p-8 border border-cyan/10 bg-navy-deep/50 backdrop-blur-sm hover:border-cyan/30 transition-all duration-300 group opacity-0 animate-fade-in ${
-                  service.link ? "cursor-pointer" : ""
-                }`}
-                style={{ animationDelay: `${0.15 * (index + 1)}s` }}
-              >
+            const className = `relative rounded-2xl p-8 border border-cyan/10 bg-navy-deep/50 backdrop-blur-sm hover:border-cyan/30 transition-all duration-300 group opacity-0 animate-fade-in ${
+              service.link ? "cursor-pointer" : ""
+            }`;
+            const style = { animationDelay: `${0.15 * (index + 1)}s` };
+            const content = (
+              <>
                 <div className="w-12 h-12 rounded-lg bg-cyan/10 flex items-center justify-center mb-5 group-hover:bg-cyan/20 transition-colors">
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
@@ -69,7 +65,19 @@ const ServicesSection = () => {
                     Saiba mais →
                   </span>
                 )}
-              </Wrapper>
+              </>
+            );
+            if (service.link) {
+              return (
+                <a key={service.title} href={service.link} className={className} style={style}>
+                  {content}
+                </a>
+              );
+            }
+            return (
+              <div key={service.title} className={className} style={style}>
+                {content}
+              </div>
             );
           })}
         </div>
