@@ -9,9 +9,6 @@ const navLinks = [
   { label: "Início", href: "/#hero" },
   { label: "Quem Somos", href: "/#about" },
   { label: "Serviços", href: "/#services" },
-  { label: "Benefícios", href: "/#benefits" },
-  { label: "Criação de Sites", href: "/sites" },
-  { label: "Contato", href: "/#contact" },
 ];
 
 const Navbar = () => {
