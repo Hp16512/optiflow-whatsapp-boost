@@ -17,17 +17,19 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 lg:px-8 pt-20 pb-16 text-center">
         <div className="max-w-4xl mx-auto">
           <div className="inline-block mb-6 px-4 py-2 rounded-full border border-cyan/30 bg-cyan/10 opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <span className="text-sm font-body text-primary">🚀 Automação Inteligente para seu Negócio</span>
+            <span className="text-sm font-body text-primary">🚀 Automação de WhatsApp + Criação de Sites</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight mb-6 opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <span className="text-primary-foreground">Liberte Sua Empresa: </span>
             <span className="text-gradient-cyan">Automação de WhatsApp</span>
-            <span className="text-primary-foreground"> para Vendas e Atendimento.</span>
+            <span className="text-primary-foreground"> e </span>
+            <span className="text-gradient-cyan">Criação de Sites</span>
+            <span className="text-primary-foreground"> que Convertem.</span>
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/70 font-body max-w-2xl mx-auto mb-10 opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            Transforme seu atendimento e impulsione suas vendas com soluções inteligentes da OptiFlow Digital.
+            Transforme seu atendimento e impulsione suas vendas com automação inteligente, ou tenha um site profissional que atrai e converte clientes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fade-in" style={{ animationDelay: "0.7s" }}>
