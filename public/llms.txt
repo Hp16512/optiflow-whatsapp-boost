@@ -1,0 +1,7 @@
+# OptiFlow Digital
+
+> Automação inteligente de WhatsApp para vendas e atendimento. Soluções personalizadas que otimizam comunicação, qualificam leads e escalam o atendimento 24/7.
+
+## Pages
+
+- [Início](/): Página principal com visão geral dos serviços de automação de WhatsApp, benefícios, depoimentos e contato.
