@@ -6,11 +6,12 @@ import optiflowLogo from "@/assets/optiflow-logo.png";
 const WHATSAPP_LINK = "https://wa.me/553899484217";
 
 const navLinks = [
-  { label: "Início", href: "#hero" },
-  { label: "Quem Somos", href: "#about" },
-  { label: "Serviços", href: "#services" },
-  { label: "Benefícios", href: "#benefits" },
-  { label: "Contato", href: "#contact" },
+  { label: "Início", href: "/#hero" },
+  { label: "Quem Somos", href: "/#about" },
+  { label: "Serviços", href: "/#services" },
+  { label: "Benefícios", href: "/#benefits" },
+  { label: "Criação de Sites", href: "/sites" },
+  { label: "Contato", href: "/#contact" },
 ];
 
 const Navbar = () => {
