@@ -1,4 +1,4 @@
-import { Clock, UserCheck, CalendarCheck, MessageSquare, PiggyBank } from "lucide-react";
+import { Clock, UserCheck, CalendarCheck, MessageSquare, PiggyBank, Globe } from "lucide-react";
 
 const services = [
   {
@@ -25,6 +25,12 @@ const services = [
     icon: PiggyBank,
     title: "Redução de Custos",
     description: "Otimize sua equipe e recursos, fazendo mais com menos investimento.",
+  },
+  {
+    icon: Globe,
+    title: "Criação de Sites",
+    description: "Sites profissionais, landing pages e lojas virtuais otimizados para converter visitantes em clientes.",
+    link: "/sites",
   },
 ];
 
