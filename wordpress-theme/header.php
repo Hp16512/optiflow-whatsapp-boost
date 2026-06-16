@@ -12,7 +12,7 @@
 <nav class="navbar">
     <div class="container">
         <a href="#hero" class="navbar-brand">
-            <div class="icon">OF</div>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/optiflow-logo.png" alt="OptiFlow Digital" style="width:32px; height:32px; border-radius:6px; object-fit:contain;">
             <span>Opti<span class="highlight">Flow</span></span>
         </a>
         <ul class="nav-links">
